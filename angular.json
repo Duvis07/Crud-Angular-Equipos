@@ -67,7 +67,8 @@
               "browserTarget": "crudBasico:build:production"
             },
             "development": {
-              "browserTarget": "crudBasico:build:development"
+              "browserTarget": "crudBasico:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
