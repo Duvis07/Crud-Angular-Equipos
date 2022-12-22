@@ -1,9 +1,9 @@
 <div class="container">
-  <button type="button" class="btn btn-dark">Agregar</button>
+  <!-- <button routerLink="/add" type="button" class="btn btn-dark">Agregar</button> -->
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id</th>
+         <th scope="col">Id</th> 
         <th scope="col">Nombre</th>
         <th scope="col">Descripcion</th>
         <th scope="col">Logo</th>
@@ -13,14 +13,14 @@
     </thead>
     <tbody>
       <tr *ngFor="let equipo of ListarEquipos">
-        <th scope="row">{{ equipo.id_equipo }}</th>
+       <th scope="row">{{ equipo.id_equipo }}</th>
         <td>{{ equipo.nombre }}</td>
         <td>{{ equipo.descripcion }}</td>
         <td>
-          <img src="{{ equipo.logo }}" alt="" width="70px" height="70px" />
+          <img src="{{ equipo.logo }}" alt="" width="100px" height="100px" />
         </td>
 
-        <td><button type="button" class="btn btn-primary">Editar</button></td>
+        <td><button (click)="modificarEquipo(equipo.id_equipo)" type="button" class="btn btn-primary">Editar</button></td>
         <td><button  (click)="eliminarEquipo(equipo.id_equipo)" type="button" class="btn btn-danger">Eliminar</button></td>
       </tr>
     </tbody>
